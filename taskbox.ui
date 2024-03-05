@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>405</width>
-    <height>150</height>
+    <height>152</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,12 @@ background-color: rgb(255, 255, 255);
    <item row="0" column="0">
     <widget class="QFrame" name="outerFrame">
      <property name="styleSheet">
-      <string notr="true">QFrame#outerFrame {border: 3px solid rgb(200, 200, 200);}</string>
+      <string notr="true">QFrame#outerFrame {border: 3px solid rgb(200, 200, 200);}
+QLabel{
+	font: 10pt &quot;Segoe UI&quot;;
+	
+	color: rgb(80, 80, 80);
+}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -51,36 +56,6 @@ background-color: rgb(255, 255, 255);
       <number>3</number>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="1" column="0">
-       <widget class="QLabel" name="timeLabel">
-        <property name="lineWidth">
-         <number>0</number>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="dateLabel">
-        <property name="lineWidth">
-         <number>0</number>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1" rowspan="3">
-       <widget class="QTextBrowser" name="taskTextBrowser">
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="lineWidth">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QFrame" name="innerFrame">
         <property name="frameShape">
@@ -122,13 +97,6 @@ background-color: rgb(255, 255, 255);
            </property>
           </spacer>
          </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="doneCheckBox">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="2">
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
@@ -161,8 +129,41 @@ background-color: rgb(255, 255, 255);
            </property>
           </spacer>
          </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="checkBox">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="dateLabel">
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="timeLabel">
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="3">
+       <widget class="QTextBrowser" name="textBrowser"/>
       </item>
      </layout>
     </widget>
