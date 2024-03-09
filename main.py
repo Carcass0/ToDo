@@ -1,8 +1,8 @@
-from asyncio import Task
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QScrollArea, QMainWindow
 
 from taskbox import Ui_Form
 from mainwindow import Ui_MainWindow
+from stylesheets import SCROLL_AREA_STYLESHEET, MAIN_WINDOW_STYLESHEET
 
 
 class MainWindow(QMainWindow):
@@ -24,6 +24,7 @@ class TaskContainer(QWidget):
 if __name__=="__main__":
     app = QApplication([])
     main_widget = MainWindow()
+    #main_widget.setStyleSheet(MAIN_WINDOW_STYLESHEET)
     main_widget.setContentsMargins(0,0,0,0)
     scroll_widget = QWidget()
     scroll_layout = QVBoxLayout(scroll_widget)
@@ -39,33 +40,7 @@ if __name__=="__main__":
     scroll_area.setWidget(scroll_widget)
     scroll_area.setWidgetResizable(True)
     scroll_area.setContentsMargins(0,0,0,0)
-    scroll_area.setStyleSheet(
-        """
-        QScrollArea {
-        border: none;
-        }
-
-        QScrollBar:vertical {
-            background: #f0f0f0;
-            width: 12px;
-        }
-
-        QScrollBar::handle:vertical {
-            background: #c0c0c0;
-            min-height: 30px;
-        }
-
-        QScrollBar::add-line:vertical {
-            height: 20px;
-            subcontrol-position: bottom;
-        }
-
-        QScrollBar::sub-line:vertical {
-            height: 20px;
-            subcontrol-position: top;
-        }
-        """
-    )
+    scroll_area.setStyleSheet(SCROLL_AREA_STYLESHEET)
     main_widget.ui.centralLayout.addWidget(scroll_area)
     main_widget.show()
     app.exec()

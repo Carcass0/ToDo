@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'taskbox.ui'
+# Form implementation generated from reading ui file 'tbox3.ui'
 #
 # Created by: PyQt6 UI code generator 6.6.1
 #
@@ -12,61 +12,51 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(405, 152)
-        Form.setStyleSheet("font: 12pt \"Segoe UI\";\n"
+        Form.resize(400, 125)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(Form.sizePolicy().hasHeightForWidth())
+        Form.setSizePolicy(sizePolicy)
+        Form.setMaximumSize(QtCore.QSize(16777215, 125))
+        Form.setStyleSheet("font: 11pt \"Segoe UI\";\n"
 "background-color: rgb(255, 255, 255);\n"
-"\n"
-"\n"
 "")
         self.gridLayout = QtWidgets.QGridLayout(Form)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
-        self.outerFrame = QtWidgets.QFrame(parent=Form)
-        self.outerFrame.setStyleSheet("QFrame#outerFrame {border: 3px solid rgb(200, 200, 200);}\n"
-"QLabel{\n"
-"    font: 10pt \"Segoe UI\";\n"
-"    \n"
-"    color: rgb(80, 80, 80);\n"
-"}")
-        self.outerFrame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.outerFrame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.outerFrame.setLineWidth(3)
-        self.outerFrame.setObjectName("outerFrame")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.outerFrame)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.innerFrame = QtWidgets.QFrame(parent=self.outerFrame)
+        self.startLabel = QtWidgets.QLabel(parent=Form)
+        self.startLabel.setStyleSheet("color: rgb(80, 80, 80);\n"
+"")
+        self.startLabel.setObjectName("startLabel")
+        self.gridLayout.addWidget(self.startLabel, 1, 0, 3, 2)
+        self.endLabel = QtWidgets.QLabel(parent=Form)
+        self.endLabel.setStyleSheet("color: rgb(80, 80, 80);")
+        self.endLabel.setObjectName("endLabel")
+        self.gridLayout.addWidget(self.endLabel, 4, 0, 1, 2)
+        self.innerFrame = QtWidgets.QFrame(parent=Form)
+        self.innerFrame.setStyleSheet("")
         self.innerFrame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.innerFrame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.innerFrame.setObjectName("innerFrame")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.innerFrame)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        spacerItem = QtWidgets.QSpacerItem(1, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.gridLayout_3.addItem(spacerItem, 0, 1, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(7, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.gridLayout_3.addItem(spacerItem1, 1, 0, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(7, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.gridLayout_3.addItem(spacerItem2, 1, 2, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(1, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.gridLayout_3.addItem(spacerItem3, 2, 1, 1, 1)
-        self.checkBox = QtWidgets.QCheckBox(parent=self.innerFrame)
-        self.checkBox.setStyleSheet("")
-        self.checkBox.setText("")
-        self.checkBox.setObjectName("checkBox")
-        self.gridLayout_3.addWidget(self.checkBox, 1, 1, 1, 1)
-        self.gridLayout_2.addWidget(self.innerFrame, 0, 0, 1, 1)
-        self.dateLabel = QtWidgets.QLabel(parent=self.outerFrame)
-        self.dateLabel.setLineWidth(0)
-        self.dateLabel.setObjectName("dateLabel")
-        self.gridLayout_2.addWidget(self.dateLabel, 2, 0, 1, 1)
-        self.timeLabel = QtWidgets.QLabel(parent=self.outerFrame)
-        self.timeLabel.setLineWidth(0)
-        self.timeLabel.setObjectName("timeLabel")
-        self.gridLayout_2.addWidget(self.timeLabel, 1, 0, 1, 1)
-        self.textBrowser = QtWidgets.QTextBrowser(parent=self.outerFrame)
-        self.textBrowser.setObjectName("textBrowser")
-        self.gridLayout_2.addWidget(self.textBrowser, 0, 1, 3, 1)
-        self.gridLayout.addWidget(self.outerFrame, 0, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(7, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_3.addItem(spacerItem, 1, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(1, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_3.addItem(spacerItem1, 0, 1, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(1, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_3.addItem(spacerItem2, 2, 1, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(7, 1, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_3.addItem(spacerItem3, 1, 2, 1, 1)
+        self.doneCheckBox = QtWidgets.QCheckBox(parent=self.innerFrame)
+        self.doneCheckBox.setStyleSheet("")
+        self.doneCheckBox.setText("")
+        self.doneCheckBox.setObjectName("doneCheckBox")
+        self.gridLayout_3.addWidget(self.doneCheckBox, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.innerFrame, 0, 0, 1, 1)
+        self.taskEdit = QtWidgets.QTextEdit(parent=Form)
+        self.taskEdit.setObjectName("taskEdit")
+        self.gridLayout.addWidget(self.taskEdit, 0, 2, 6, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -74,5 +64,5 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.dateLabel.setText(_translate("Form", "TextLabel"))
-        self.timeLabel.setText(_translate("Form", "TextLabel"))
+        self.startLabel.setText(_translate("Form", "TextLabel"))
+        self.endLabel.setText(_translate("Form", "TextLabel"))
